@@ -14,6 +14,7 @@ public class KafkaOutputBean {
 		Notification message;
 		try {
 			message = new ObjectMapper().readValue(body, Notification.class);
+			System.out.println("Found message: " + message);
 		} catch (Exception e) {
 			message = new Notification();
 		}

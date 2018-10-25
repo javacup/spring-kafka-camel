@@ -10,6 +10,7 @@ public class Notification {
 
 	private String title;
 	private String body;
+	private Long visitId;
 
 	public Notification() {
 	}
@@ -36,9 +37,17 @@ public class Notification {
 		this.body = body;
 	}
 
+	public Long getVisitId() {
+		return visitId;
+	}
+
+	public void setVisitId(Long visitId) {
+		this.visitId = visitId;
+	}
+
 	@Override
 	public String toString() {
-		return "Notification [title=" + title + ", body=" + body + "]";
+		return "Notification [title=" + title + ", body=" + body + ", visitId=" + visitId + "]";
 	}
 
 }
