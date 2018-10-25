@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.gs.test.camel.config.KafkaRouteProducer;
 import com.gs.test.camel.model.Notification;
 
 @Controller
@@ -38,7 +39,7 @@ public class MessageController {
 	@Qualifier("KafkaRouteConsumer")
 	RouteBuilder kafkaRouteConsumer;
 
-	@EndpointInject(uri = "direct:kafkaRoute")
+	@EndpointInject(uri = KafkaRouteProducer.ROUTE)
 	ProducerTemplate kafkaProducer;
 
 	@Autowired
@@ -66,7 +67,7 @@ public class MessageController {
 	public void get(HttpServletRequest request, HttpServletResponse response) {
 		System.out.println("Handling GET request method");
 		try {
-			kafkaProducer.sendBody("direct:kafkaRoute", "This is a message from the /message route!");
+			kafkaProducer.sendBody(KafkaRouteProducer.ROUTE, "This is a message from the /message route!");
 		} catch (Exception exception) {
 			exception.printStackTrace();
 		}
@@ -86,7 +87,7 @@ public class MessageController {
 	public void post(HttpServletRequest request, HttpServletResponse response, @RequestBody Notification notification) {
 		System.out.println("Handling POST request method");
 		try {
-			kafkaProducer.sendBody("direct:kafkaRoute", mapper.writeValueAsString(notification));
+			kafkaProducer.sendBody(KafkaRouteProducer.ROUTE, mapper.writeValueAsString(notification));
 		} catch (Exception exception) {
 			exception.printStackTrace();
 		}

@@ -4,6 +4,8 @@ import org.apache.camel.builder.RouteBuilder;
 
 public class KafkaRouteProducer extends RouteBuilder {
 
+	public static final String ROUTE = "direct:kafkaRoute";
+	
 	private String route;
 
 	public KafkaRouteProducer(String route) {
@@ -11,6 +13,6 @@ public class KafkaRouteProducer extends RouteBuilder {
 	}
 
 	public void configure() {
-		from("direct:kafkaRoute").to(this.route);
+		from(ROUTE).to(this.route);
 	}
 }
