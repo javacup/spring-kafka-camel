@@ -1,4 +1,4 @@
-package me.skylerlayne;
+package com.gs.test.camel;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package me.skylerlayne.controller;
+package com.gs.test.camel.controller;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package me.skylerlayne;
+package com.gs.test.camel;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

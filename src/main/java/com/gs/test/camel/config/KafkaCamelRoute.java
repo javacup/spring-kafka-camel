@@ -1,10 +1,10 @@
-package me.skylerlayne.config;
+package com.gs.test.camel.config;
 
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import me.skylerlayne.controller.MessageProcessor;
+import com.gs.test.camel.controller.MessageProcessor;
 
 @Configuration
 public class KafkaCamelRoute {

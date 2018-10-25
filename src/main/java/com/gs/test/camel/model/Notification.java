@@ -1,4 +1,4 @@
-package me.skylerlayne.model;
+package com.gs.test.camel.model;
 
 /**
  * A simple class to model a notification.

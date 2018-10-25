@@ -1,4 +1,4 @@
-package me.skylerlayne.config;
+package com.gs.test.camel.config;
 
 import org.apache.camel.builder.RouteBuilder;
 

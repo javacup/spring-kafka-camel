@@ -1,8 +1,8 @@
-package me.skylerlayne.config;
+package com.gs.test.camel.config;
 
 import org.codehaus.jackson.map.ObjectMapper;
 
-import me.skylerlayne.model.Notification;
+import com.gs.test.camel.model.Notification;
 
 public class KafkaOutputBean {
 

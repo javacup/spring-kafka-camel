@@ -1,4 +1,4 @@
-package me.skylerlayne.controller;
+package com.gs.test.camel.controller;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import me.skylerlayne.model.Notification;
+import com.gs.test.camel.model.Notification;
 
 @Controller
 @ResponseBody
