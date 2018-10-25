@@ -1,5 +1,7 @@
 package com.gs.test.camel;
 
+import java.util.Date;
+
 import org.apache.camel.EndpointInject;
 import org.apache.camel.ProducerTemplate;
 import org.apache.camel.builder.RouteBuilder;
@@ -38,6 +40,6 @@ public class SimpleIntegrationTest extends CamelTestSupport{
 	
 	@Test
 	public void testSimpleMessage() {
-		kafkaProducer.sendBody(KafkaRouteProducer.ROUTE, "This is a message from the JUNIT message route!");
+		kafkaProducer.sendBody(KafkaRouteProducer.ROUTE, "This is a message from the JUNIT message route @ "+new Date()+"!");
 	}
 }
