@@ -11,6 +11,7 @@ public class KafkaOutputBean {
 	}
 
 	public Notification retrieve(String body) {
+		System.out.println("Body in KafkaOutputBean: " + body);
 		Notification message;
 		try {
 			message = new ObjectMapper().readValue(body, Notification.class);

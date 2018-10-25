@@ -28,6 +28,10 @@ public class SimpleIntegrationTest extends CamelTestSupport{
 	@EndpointInject(uri = KafkaRouteProducer.ROUTE)
 	ProducerTemplate kafkaProducer;
 	
+	@Autowired
+	@Qualifier("KafkaRouteConsumer")
+	RouteBuilder kafkaRouteConsumer;	
+	
 	@Before
 	public void before() {
 		assertNotNull(kafkaRouteProducer);
